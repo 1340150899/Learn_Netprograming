@@ -21,6 +21,7 @@ void *my_send_fun(void *arg){
 	fgets(buf, sizeof(buf), stdin);
 	buf[strlen(buf)-1] = 0;
 	if(strncmp(buf, "sayto", 5) == 0){
+	    //发给谁 设置 ip port
 	    unsigned short port = 0;
 	    char ip[16] = "";
 	    sscanf(buf, "sayto %s %hd", ip, &port);
